@@ -16,20 +16,20 @@ $ sudo apt-get install ros-$ROS_DISTRO-stage-ros ros-$ROS_DISTRO-map-server
 Clone this repository into your `catkin_ws/src` folder:
 
 ```bash
-$ git clone https://github.com/adrianomcr/follow_wall.git
+$ git clone https://github.com/SillyEndless/follow_wall_py.git
 ```
 
 Compile and source:
 
 ```bash
-$ catkin build
+$ catkin_make
 $ source ~/catkin_ws/devel/setup.bash
 ```
 
 For a quick example, run:
 
 ```bash
-$ roslaunch follow_wall folow_wall_stage.launch
+$ roslaunch follow_wall follow_wall_stage.launch
 ```
 
 

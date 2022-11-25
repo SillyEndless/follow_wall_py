@@ -25,4 +25,4 @@ laser_frame_id: base_laser_link
 #Enable the saving of gt data
 log_gt_flag: True
 gt_topic: base_pose_ground_truth
-log_path_name: /home/adrianomcr/log_follow_wall_stage.txt
+log_path_name: /home/xiaojake/log_follow_wall_stage.txt

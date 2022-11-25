@@ -194,37 +194,37 @@ if __name__ == '__main__':
 
 
     #Load parameters
-    try:
-        vr = float(rospy.get_param("/follow_wall/vr"))
-        kf = float(rospy.get_param("/follow_wall/kf"))
-        epsilon = float(rospy.get_param("/follow_wall/epsilon"))
-        d = float(rospy.get_param("/follow_wall/d"))
-        cmd_vel_topic = rospy.get_param("/follow_wall/cmd_vel_topic")
-        scan_topic = rospy.get_param("/follow_wall/scan_topic")
-        laser_frame_id = rospy.get_param("/follow_wall/laser_frame_id")
-        log_gt_flag = bool(rospy.get_param("/follow_wall/log_gt_flag"))
+    #try:
+    vr = float(rospy.get_param("/follow_wall/vr"))
+    kf = float(rospy.get_param("/follow_wall/kf"))
+    epsilon = float(rospy.get_param("/follow_wall/epsilon"))
+    d = float(rospy.get_param("/follow_wall/d"))
+    cmd_vel_topic = rospy.get_param("/follow_wall/cmd_vel_topic")
+    scan_topic = rospy.get_param("/follow_wall/scan_topic")
+    laser_frame_id = rospy.get_param("/follow_wall/laser_frame_id")
+    log_gt_flag = bool(rospy.get_param("/follow_wall/log_gt_flag"))
+    if(log_gt_flag):
+        gt_topic = rospy.get_param("/follow_wall/gt_topic")
+        log_path_name = rospy.get_param("/follow_wall/log_path_name")
+        #print "\n\33[92mParameters loaded\33[0m"
+        #print "\33[94mvr: ", vr,"\33[0m"
+        #print "\33[94mkf: ", kf,"\33[0m"
+        #print "\33[94mepsilon: ", epsilon,"\33[0m"
+        #print "\33[94md: ", d,"\33[0m"
+        #print "\33[94mcmd_vel_topic: ", cmd_vel_topic,"\33[0m"
+        #print "\33[94mscan_topic: ", scan_topic,"\33[0m"
+        #print "\33[94mlaser_frame_id: ", laser_frame_id,"\33[0m"
+        #print "\33[94mlog_gt_flag: ", log_gt_flag,"\33[0m"
         if(log_gt_flag):
-            gt_topic = rospy.get_param("/follow_wall/gt_topic")
-            log_path_name = rospy.get_param("/follow_wall/log_path_name")
-        print "\n\33[92mParameters loaded\33[0m"
-        print "\33[94mvr: ", vr,"\33[0m"
-        print "\33[94mkf: ", kf,"\33[0m"
-        print "\33[94mepsilon: ", epsilon,"\33[0m"
-        print "\33[94md: ", d,"\33[0m"
-        print "\33[94mcmd_vel_topic: ", cmd_vel_topic,"\33[0m"
-        print "\33[94mscan_topic: ", scan_topic,"\33[0m"
-        print "\33[94mlaser_frame_id: ", laser_frame_id,"\33[0m"
-        print "\33[94mlog_gt_flag: ", log_gt_flag,"\33[0m"
-        if(log_gt_flag):
-            print "\33[94mgt_topic: ", gt_topic,"\33[0m"
-            print "\33[94mlog_path_namec: ", log_path_name,"\33[0m"
-    except:
-        print "\33[41mProblem occurred when trying to read the parameters!\33[0m"
-        print "\33[41mNode follow_wall.py\33[0m"
+            #print "\33[94mgt_topic: ", gt_topic,"\33[0m"
+            #print "\33[94mlog_path_namec: ", log_path_name,"\33[0m"
+    #except:
+        #print "\33[41mProblem occurred when trying to read the parameters!\33[0m"
+        #print "\33[41mNode follow_wall.py\33[0m"
 
 
 
-    try:
-        follow_wall()
-    except rospy.ROSInterruptException:
-        pass
+    #try:
+            follow_wall()
+    #except rospy.ROSInterruptException:
+    pass
